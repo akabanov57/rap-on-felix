@@ -1,0 +1,15 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+-buildpath: \
+	org.eclipse.rap.rwt;version=latest,\
+	org.apache.felix.http.servlet-api,\
+	osgi.core
+Private-Package: org.eclipse.rap.examples.internal
+Export-Package: org.eclipse.rap.examples
+-includeresource: about.html,\
+	resources=src/resources,\
+	icons=icons,\
+	theme=theme
+-sources: false
+-pom: groupid = org.eclipse.rap,\
+	version = ${versionmask;===;${@version}}-SNAPSHOT
+Bundle-Activator: org.eclipse.rap.examples.internal.Activator

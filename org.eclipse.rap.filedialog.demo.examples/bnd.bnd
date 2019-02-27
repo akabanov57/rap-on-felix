@@ -1,0 +1,10 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-Activator: org.eclipse.rap.filedialog.demo.examples.Activator
+Private-Package: org.eclipse.rap.filedialog.demo.examples
+-buildpath: \
+	osgi.core,\
+	org.eclipse.rap.examples;version=latest,\
+	org.eclipse.rap.fileupload;version=latest,\
+	org.eclipse.rap.rwt;version=latest,\
+	org.eclipse.rap.filedialog;version=latest
+-includeresource: about.html

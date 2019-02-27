@@ -1,0 +1,18 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+-buildpath: \
+	org.eclipse.rap.jface;version=latest,\
+	org.eclipse.rap.rwt;version=latest,\
+	org.eclipse.rap.examples;version=latest,\
+	org.eclipse.equinox.common;version=latest,\
+	org.apache.felix.http.servlet-api,\
+	org.eclipse.core.commands;version=latest,\
+	osgi.core
+Private-Package: \
+	org.eclipse.rap.examples.pages.internal,\
+	org.eclipse.rap.examples.pages.internal.scripting
+Export-Package: org.eclipse.rap.examples.pages
+-includeresource: about.html,\
+	resources=src/resources
+-pom: groupid = org.eclipse.rap,\
+	version = ${versionmask;===;${@version}}-SNAPSHOT
+Bundle-Activator: org.eclipse.rap.examples.pages.internal.Activator
