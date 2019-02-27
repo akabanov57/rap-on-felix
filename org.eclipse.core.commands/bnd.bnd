@@ -1,0 +1,16 @@
+Automatic-Module-Name: org.eclipse.core.commands
+Bundle-SymbolicName: org.eclipse.core.commands
+Bundle-Version: 3.9.200-SNAPSHOT
+Export-Package: \
+	org.eclipse.core.commands,\
+	org.eclipse.core.commands.common,\
+	org.eclipse.core.commands.contexts,\
+	org.eclipse.core.commands.util,\
+	org.eclipse.core.commands.operations
+Private-Package: \
+	org.eclipse.core.internal.commands.operations,\
+	org.eclipse.core.internal.commands.util
+-buildpath: org.eclipse.equinox.common;version=latest
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.platform,\
+	artifactid = org.eclipse.core.commands

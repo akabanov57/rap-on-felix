@@ -1,0 +1,12 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-SymbolicName: org.eclipse.rap.fileupload;singleton:=true
+Automatic-Module-Name: org.eclipse.rap.fileupload
+-buildpath: \
+	org.eclipse.rap.rwt;version=latest,\
+	org.apache.felix.http.servlet-api,\
+	org.apache.commons.commons-fileupload
+Private-Package: org.eclipse.rap.fileupload.internal
+Export-Package: org.eclipse.rap.fileupload
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.rap,\
+	artifactid = org.eclipse.rap.fileupload

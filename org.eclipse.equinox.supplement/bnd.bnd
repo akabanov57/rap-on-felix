@@ -1,0 +1,29 @@
+Bundle-Name: org.eclipse.equinox.supplement
+Bundle-SymbolicName: org.eclipse.equinox.supplement
+Automatic-Module-Name: org.eclipse.equinox.supplement
+Export-Package: \
+	org.eclipse.osgi.util,\
+	org.eclipse.osgi.storagemanager,\
+	org.eclipse.osgi.service.urlconversion,\
+	org.eclipse.osgi.service.runnable,\
+	org.eclipse.osgi.service.localization,\
+	org.eclipse.osgi.service.environment,\
+	org.eclipse.osgi.service.debug,\
+	org.eclipse.osgi.service.datalocation,\
+	org.eclipse.osgi.report.resolution,\
+	org.eclipse.osgi.framework.log,\
+	org.eclipse.osgi.framework.eventmgr,\
+	org.eclipse.osgi.framework.console,\
+	org.eclipse.equinox.log
+Private-Package: \
+	org.eclipse.osgi.framework.internal.reliablefile,\
+	org.eclipse.osgi.internal.location,\
+	org.eclipse.osgi.internal.messages,\
+	org.eclipse.osgi.internal.util
+Bundle-Version: 1.8.100-SNAPSHOT
+-buildpath: \
+	osgi.cmpn,\
+	osgi.core
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.platform,\
+	artifactid = org.eclipse.equinox.supplement

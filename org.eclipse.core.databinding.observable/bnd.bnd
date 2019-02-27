@@ -1,0 +1,22 @@
+Bundle-Name: org.eclipse.core.databinding.observable
+Bundle-SymbolicName: org.eclipse.core.databinding.observable
+Automatic-Module-Name: org.eclipse.core.databinding.observable
+Bundle-Version: 1.6.300-SNAPSHOT
+Export-Package: \
+	org.eclipse.core.databinding.observable,\
+	org.eclipse.core.databinding.observable.list,\
+	org.eclipse.core.databinding.observable.map,\
+	org.eclipse.core.databinding.observable.masterdetail,\
+	org.eclipse.core.databinding.observable.set,\
+	org.eclipse.core.databinding.observable.sideeffect,\
+	org.eclipse.core.databinding.observable.value,\
+	org.eclipse.core.databinding.util
+Private-Package: \
+	org.eclipse.core.internal.databinding.identity,\
+	org.eclipse.core.internal.databinding.observable,\
+	org.eclipse.core.internal.databinding.observable.masterdetail,\
+	org.eclipse.core.internal.databinding.observable.sideeffect
+-buildpath: org.eclipse.equinox.common;version=latest
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.platform,\
+	artifactid = org.eclipse.core.databinding.observable

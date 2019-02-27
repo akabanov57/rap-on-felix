@@ -1,0 +1,13 @@
+Bundle-Version: 1.4.300-SNAPSHOT
+Bundle-Name: org.eclipse.core.databinding.beans
+Bundle-SymbolicName: org.eclipse.core.databinding.beans
+Automatic-Module-Name: org.eclipse.core.databinding.beans
+-buildpath: \
+	org.eclipse.core.databinding.property;version=latest,\
+	org.eclipse.core.databinding.observable;version=latest,\
+	org.eclipse.equinox.common;version=latest
+Private-Package: org.eclipse.core.internal.databinding.beans
+Export-Package: org.eclipse.core.databinding.beans
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.platform,\
+	artifactid = org.eclipse.core.databinding.beans

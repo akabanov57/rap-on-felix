@@ -1,0 +1,23 @@
+Bundle-Version: 1.7.100-SNAPSHOT
+Bundle-Name: org.eclipse.core.databinding
+Bundle-SymbolicName: org.eclipse.core.databinding
+Automatic-Module-Name: org.eclipse.core.databinding
+-buildpath: \
+	org.eclipse.equinox.supplement,\
+	osgi.core,\
+	org.eclipse.equinox.common;version=latest,\
+	org.eclipse.core.databinding.observable;version=latest,\
+	com.ibm.icu,\
+	org.eclipse.core.databinding.property;version=latest
+Bundle-Activator: org.eclipse.core.internal.databinding.Activator
+Export-Package: \
+	org.eclipse.core.databinding,\
+	org.eclipse.core.databinding.conversion,\
+	org.eclipse.core.databinding.validation
+Private-Package: \
+	org.eclipse.core.internal.databinding.conversion,\
+	org.eclipse.core.internal.databinding.validation,\
+	org.eclipse.core.internal.databinding
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.platform,\
+	artifactid = org.eclipse.core.databinding

@@ -1,0 +1,14 @@
+Bundle-Version: 3.10.200-SNAPSHOT
+Bundle-Activator: org.eclipse.core.internal.jobs.JobActivator
+Bundle-Name: org.eclipse.core.jobs
+Bundle-SymbolicName: org.eclipse.core.jobs
+Automatic-Module-Name: org.eclipse.core.jobs
+Export-Package: org.eclipse.core.runtime.jobs
+Private-Package: org.eclipse.core.internal.jobs
+-buildpath: \
+	org.eclipse.equinox.common;version=latest,\
+	osgi.core,\
+	org.eclipse.equinox.supplement
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.platform,\
+	artifactid = org.eclipse.core.jobs

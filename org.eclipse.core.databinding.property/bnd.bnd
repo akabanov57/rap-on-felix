@@ -1,0 +1,20 @@
+Bundle-Name: org.eclipse.core.databinding.property
+Automatic-Module-Name: org.eclipse.core.databinding.property
+Bundle-SymbolicName: org.eclipse.core.databinding.property
+Bundle-Version: 1.6.300-SNAPSHOT
+Export-Package: \
+	org.eclipse.core.databinding.property,\
+	org.eclipse.core.databinding.property.list,\
+	org.eclipse.core.databinding.property.map,\
+	org.eclipse.core.databinding.property.set,\
+	org.eclipse.core.databinding.property.value
+Private-Package: \
+	org.eclipse.core.internal.databinding.property,\
+	org.eclipse.core.internal.databinding.property.list,\
+	org.eclipse.core.internal.databinding.property.map,\
+	org.eclipse.core.internal.databinding.property.set,\
+	org.eclipse.core.internal.databinding.property.value
+-buildpath: org.eclipse.core.databinding.observable;version=latest
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.platform,\
+	artifactid = org.eclipse.core.databinding.property

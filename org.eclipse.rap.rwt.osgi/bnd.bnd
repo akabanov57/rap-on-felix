@@ -1,0 +1,15 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-Name: org.eclipse.rap.rwt.osgi
+Bundle-SymbolicName: org.eclipse.rap.rwt.osgi
+Automatic-Module-Name: org.eclipse.rap.rwt.osgi
+Private-Package: org.eclipse.rap.rwt.osgi.internal
+Export-Package: org.eclipse.rap.rwt.osgi
+Bundle-Activator: org.eclipse.rap.rwt.osgi.internal.Activator
+-buildpath: \
+	org.eclipse.rap.rwt;version=latest,\
+	osgi.enterprise,\
+	osgi.core,\
+	javax.servlet-api
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.rap,\
+	artifactid = org.eclipse.rap.rwt.osgi

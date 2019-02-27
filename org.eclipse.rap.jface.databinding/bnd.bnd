@@ -1,0 +1,29 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-Name: org.eclipse.rap.jface.databinding
+Bundle-SymbolicName: org.eclipse.rap.jface.databinding
+Automatic-Module-Name: org.eclipse.rap.jface.databinding
+Export-Package: \
+	org.eclipse.jface.databinding.dialog,\
+	org.eclipse.jface.databinding.fieldassist,\
+	org.eclipse.jface.databinding.preference,\
+	org.eclipse.jface.databinding.swt,\
+	org.eclipse.jface.databinding.util,\
+	org.eclipse.jface.databinding.viewers,\
+	org.eclipse.jface.databinding.wizard
+Private-Package: \
+	org.eclipse.jface.internal.databinding.provisional.swt,\
+	org.eclipse.jface.internal.databinding.swt,\
+	org.eclipse.jface.internal.databinding.util,\
+	org.eclipse.jface.internal.databinding.viewers,\
+	org.eclipse.jface.internal.databinding.provisional.viewers
+-buildpath: \
+	org.eclipse.equinox.common;version=latest,\
+	org.eclipse.core.databinding.observable;version=latest,\
+	org.eclipse.rap.rwt;version=latest,\
+	org.eclipse.rap.jface;version=latest,\
+	org.eclipse.core.databinding.property;version=latest,\
+	org.eclipse.core.databinding;version=latest,\
+	org.eclipse.core.commands;version=latest
+-includeresource: src/about.html
+-pom: groupid = org.eclipse.rap,\
+	artifactid = org.eclipse.rap.jface.databinding
