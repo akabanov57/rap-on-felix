@@ -6,8 +6,8 @@ Automatic-Module-Name: org.eclipse.equinox.common
 Export-Package: \
 	org.eclipse.core.runtime,\
 	org.eclipse.equinox.events,\
+	org.eclipse.core.internal.boot,\
 	org.eclipse.core.internal.runtime
-Private-Package: org.eclipse.core.internal.boot
 -buildpath: \
 	org.eclipse.equinox.supplement,\
 	osgi.core,\

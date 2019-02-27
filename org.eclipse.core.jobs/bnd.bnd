@@ -3,8 +3,9 @@ Bundle-Activator: org.eclipse.core.internal.jobs.JobActivator
 Bundle-Name: org.eclipse.core.jobs
 Bundle-SymbolicName: org.eclipse.core.jobs
 Automatic-Module-Name: org.eclipse.core.jobs
-Export-Package: org.eclipse.core.runtime.jobs
-Private-Package: org.eclipse.core.internal.jobs
+Export-Package: \
+	org.eclipse.core.runtime.jobs,\
+	org.eclipse.core.internal.jobs
 -buildpath: \
 	org.eclipse.equinox.common;version=latest,\
 	osgi.core,\

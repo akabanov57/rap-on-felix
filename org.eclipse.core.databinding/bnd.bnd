@@ -13,11 +13,10 @@ Bundle-Activator: org.eclipse.core.internal.databinding.Activator
 Export-Package: \
 	org.eclipse.core.databinding,\
 	org.eclipse.core.databinding.conversion,\
-	org.eclipse.core.databinding.validation
-Private-Package: \
+	org.eclipse.core.databinding.validation,\
 	org.eclipse.core.internal.databinding.conversion,\
-	org.eclipse.core.internal.databinding.validation,\
-	org.eclipse.core.internal.databinding
+	org.eclipse.core.internal.databinding.validation
+Private-Package: org.eclipse.core.internal.databinding
 -includeresource: src/about.html
 -pom: groupid = org.eclipse.platform,\
 	artifactid = org.eclipse.core.databinding

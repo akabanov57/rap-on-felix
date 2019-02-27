@@ -28,11 +28,10 @@ Export-Package: \
 	org.eclipse.jface.bindings,\
 	org.eclipse.jface.action.images,\
 	org.eclipse.jface.action,\
-	org.eclipse.jface
-Private-Package: \
-	org.eclipse.jface.internal,\
-	org.eclipse.jface.internal.provisional.action,\
-	org.eclipse.jface.internal.util
+	org.eclipse.jface,\
+	org.eclipse.jface.internal.util,\
+	org.eclipse.jface.internal.provisional.action
+Private-Package: org.eclipse.jface.internal
 -buildpath: \
 	org.eclipse.rap.rwt;version=latest,\
 	osgi.core,\

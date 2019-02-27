@@ -9,13 +9,13 @@ Export-Package: \
 	org.eclipse.jface.databinding.swt,\
 	org.eclipse.jface.databinding.util,\
 	org.eclipse.jface.databinding.viewers,\
-	org.eclipse.jface.databinding.wizard
+	org.eclipse.jface.databinding.wizard,\
+	org.eclipse.jface.internal.databinding.provisional.viewers
 Private-Package: \
 	org.eclipse.jface.internal.databinding.provisional.swt,\
 	org.eclipse.jface.internal.databinding.swt,\
 	org.eclipse.jface.internal.databinding.util,\
-	org.eclipse.jface.internal.databinding.viewers,\
-	org.eclipse.jface.internal.databinding.provisional.viewers
+	org.eclipse.jface.internal.databinding.viewers
 -buildpath: \
 	org.eclipse.equinox.common;version=latest,\
 	org.eclipse.core.databinding.observable;version=latest,\
