@@ -8,7 +8,7 @@
  * Contributors:
  *    EclipseSource - initial API and implementation
  ******************************************************************************/
-package org.eclipse.swt.internal.widgets;
+package org.eclipse.rap.filedialog.internal;
 
 import org.eclipse.rap.rwt.internal.textsize.TextSizeUtil;
 import org.eclipse.swt.SWT;
@@ -19,7 +19,6 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Control;
 
 
-@SuppressWarnings("restriction")
 public class LayoutUtil {
 
   private final static int HORIZONTAL_DIALOG_UNIT_PER_CHAR = 4;

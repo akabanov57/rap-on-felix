@@ -8,10 +8,7 @@
  * Contributors:
  *    EclipseSource - initial API and implementation
  ******************************************************************************/
-package org.eclipse.swt.internal.widgets;
-
-import static org.eclipse.swt.internal.widgets.LayoutUtil.createGridLayout;
-import static org.eclipse.swt.internal.widgets.LayoutUtil.createHorizontalFillData;
+package org.eclipse.rap.filedialog.internal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +26,7 @@ public class ProgressCollector extends Composite {
 
   public ProgressCollector( Composite parent ) {
     super( parent, SWT.NONE );
-    setLayout( createGridLayout( 2, 0, 5 ) );
+    setLayout( LayoutUtil.createGridLayout( 2, 0, 5 ) );
     createChildren();
     completedFiles = new ArrayList<>();
     uploadExceptions = new ArrayList<>();
@@ -45,7 +42,7 @@ public class ProgressCollector extends Composite {
 
   private void createChildren() {
     progressBar = new ProgressBar( this, SWT.HORIZONTAL );
-    progressBar.setLayoutData( createHorizontalFillData() );
+    progressBar.setLayoutData( LayoutUtil.createHorizontalFillData() );
   }
 
   void updateProgress( int percent ) {

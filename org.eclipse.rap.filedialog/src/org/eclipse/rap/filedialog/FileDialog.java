@@ -10,18 +10,20 @@
  *    Austin Riddle (Texas Center for Applied Technology) - RAP implementation
  *    EclipseSource - ongoing development
  *******************************************************************************/
-package org.eclipse.swt.widgets;
-
-import static org.eclipse.swt.internal.widgets.LayoutUtil.createButtonLayoutData;
-import static org.eclipse.swt.internal.widgets.LayoutUtil.createFillData;
-import static org.eclipse.swt.internal.widgets.LayoutUtil.createGridLayout;
-import static org.eclipse.swt.internal.widgets.LayoutUtil.createHorizontalFillData;
+package org.eclipse.rap.filedialog;
 
 import java.io.File;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import org.eclipse.rap.filedialog.internal.FileUploadRunnable;
+import org.eclipse.rap.filedialog.internal.LayoutUtil;
+import org.eclipse.rap.filedialog.internal.ProgressCollector;
+import org.eclipse.rap.filedialog.internal.UploadPanel;
+import org.eclipse.rap.filedialog.internal.Uploader;
+import org.eclipse.rap.filedialog.internal.UploaderService;
+import org.eclipse.rap.filedialog.internal.UploaderWidget;
 import org.eclipse.rap.fileupload.DiskFileUploadReceiver;
 import org.eclipse.rap.fileupload.FileUploadHandler;
 import org.eclipse.rap.fileupload.UploadSizeLimitExceededException;
@@ -45,14 +47,17 @@ import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
-import org.eclipse.swt.internal.widgets.FileUploadRunnable;
-import org.eclipse.swt.internal.widgets.ProgressCollector;
-import org.eclipse.swt.internal.widgets.UploadPanel;
-import org.eclipse.swt.internal.widgets.Uploader;
-import org.eclipse.swt.internal.widgets.UploaderService;
-import org.eclipse.swt.internal.widgets.UploaderWidget;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Dialog;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Shell;
 
 
 /**
@@ -370,7 +375,7 @@ public class FileDialog extends Dialog {
     int locationY = ( displaySize.height - prefSize.y ) / 2 + displaySize.y;
     shell.setBounds( locationX, locationY, prefSize.x, prefSize.y );
     // set spacer real layout data after shell prefer size calculation
-    spacer.setLayoutData( createHorizontalFillData() );
+    spacer.setLayoutData( LayoutUtil.createHorizontalFillData() );
   }
 
   private void initializeDefaults() {
@@ -378,15 +383,15 @@ public class FileDialog extends Dialog {
   }
 
   private void createControls() {
-    shell.setLayout( createGridLayout( 1, 10, 10 ) );
+    shell.setLayout( LayoutUtil.createGridLayout( 1, 10, 10 ) );
     createDialogArea( shell );
     createButtonsArea( shell );
   }
 
   private void createDialogArea( Composite parent ) {
     Composite dialogArea = new Composite( parent, SWT.NONE );
-    dialogArea.setLayoutData( createFillData() );
-    dialogArea.setLayout( createGridLayout( 1, 0, 5 ) );
+    dialogArea.setLayoutData( LayoutUtil.createFillData() );
+    dialogArea.setLayout( LayoutUtil.createGridLayout( 1, 0, 5 ) );
     createUploadsArea( dialogArea );
     createProgressArea( dialogArea );
     createDropTarget( dialogArea );
@@ -394,7 +399,7 @@ public class FileDialog extends Dialog {
 
   private void createUploadsArea( Composite parent ) {
     uploadsScroller = new ScrolledComposite( parent, isMulti() ? SWT.V_SCROLL : SWT.NONE );
-    uploadsScroller.setLayoutData( createFillData() );
+    uploadsScroller.setLayoutData( LayoutUtil.createFillData() );
     uploadsScroller.setExpandHorizontal( true );
     uploadsScroller.setExpandVertical( true );
     Composite scrolledContent = new Composite( uploadsScroller, SWT.NONE );
@@ -414,13 +419,13 @@ public class FileDialog extends Dialog {
                 ? RWTMessages.getMessage( "RWT_FileDialogMultiUploadPanelMessage" )
                 : RWTMessages.getMessage( "RWT_FileDialogSingleUploadPanelMessage" );
     UploadPanel panel = new UploadPanel( parent, new String[] { text } );
-    panel.setLayoutData( createHorizontalFillData() );
+    panel.setLayoutData( LayoutUtil.createHorizontalFillData() );
     return panel;
   }
 
   private void createProgressArea( Composite parent ) {
     progressCollector = new ProgressCollector( parent );
-    progressCollector.setLayoutData( createHorizontalFillData() );
+    progressCollector.setLayoutData( LayoutUtil.createHorizontalFillData() );
   }
 
   private void createDropTarget( Control control ) {
@@ -471,8 +476,8 @@ public class FileDialog extends Dialog {
 
   private void createButtonsArea( Composite parent ) {
     Composite buttonsArea = new Composite( parent, SWT.NONE );
-    buttonsArea.setLayout( createGridLayout( 4, 0, 5 ) );
-    buttonsArea.setLayoutData( createHorizontalFillData() );
+    buttonsArea.setLayout( LayoutUtil.createGridLayout( 4, 0, 5 ) );
+    buttonsArea.setLayoutData( LayoutUtil.createHorizontalFillData() );
     String text = isMulti() ? SWT.getMessage( "SWT_Add" ) : SWT.getMessage( "SWT_Browse" );
     createFileUpload( buttonsArea, text );
     createSpacer( buttonsArea );
@@ -497,7 +502,7 @@ public class FileDialog extends Dialog {
   protected FileUpload createFileUpload( Composite parent, String text ) {
     FileUpload fileUpload = new FileUpload( parent, isMulti() ? SWT.MULTI : SWT.NONE );
     fileUpload.setText( text );
-    fileUpload.setLayoutData( createButtonLayoutData( fileUpload ) );
+    fileUpload.setLayoutData( LayoutUtil.createButtonLayoutData( fileUpload ) );
     if( filterExtensions != null ) {
       fileUpload.setFilterExtensions( filterExtensions );
     }
@@ -513,13 +518,13 @@ public class FileDialog extends Dialog {
 
   private void createSpacer( Composite buttonArea ) {
     spacer = new Label( buttonArea, SWT.NONE );
-    spacer.setLayoutData( createButtonLayoutData( spacer ) );
+    spacer.setLayoutData( LayoutUtil.createButtonLayoutData( spacer ) );
   }
 
   protected Button createButton( Composite parent, String text ) {
     Button button = new Button( parent, SWT.PUSH );
     button.setText( text );
-    button.setLayoutData( createButtonLayoutData( button ) );
+    button.setLayoutData( LayoutUtil.createButtonLayoutData( button ) );
     return button;
   }
 
@@ -566,7 +571,7 @@ public class FileDialog extends Dialog {
   private UploadPanel createUploadPanel( String[] fileNames ) {
     Composite parent = ( Composite )uploadsScroller.getContent();
     UploadPanel uploadPanel = new UploadPanel( parent, fileNames );
-    uploadPanel.setLayoutData( createHorizontalFillData() );
+    uploadPanel.setLayoutData( LayoutUtil.createHorizontalFillData() );
     return uploadPanel;
   }
 

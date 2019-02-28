@@ -8,7 +8,7 @@
  * Contributors:
  *    EclipseSource - initial API and implementation
  ******************************************************************************/
-package org.eclipse.swt.internal.widgets;
+package org.eclipse.rap.filedialog.internal;
 
 import java.io.IOException;
 import java.io.InputStream;

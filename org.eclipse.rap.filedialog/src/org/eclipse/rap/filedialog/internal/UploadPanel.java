@@ -8,27 +8,24 @@
  * Contributors:
  *    EclipseSource - initial API and implementation
  ******************************************************************************/
-package org.eclipse.swt.internal.widgets;
+package org.eclipse.rap.filedialog.internal;
 
 import static org.eclipse.swt.internal.Compatibility.getMessage;
-import static org.eclipse.swt.internal.widgets.LayoutUtil.createGridLayout;
-import static org.eclipse.swt.internal.widgets.LayoutUtil.createHorizontalFillData;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.rap.filedialog.internal.FileUploadRunnable.State;
 import org.eclipse.rap.fileupload.UploadSizeLimitExceededException;
 import org.eclipse.rap.fileupload.UploadTimeLimitExceededException;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.internal.widgets.FileUploadRunnable.State;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 
 
-@SuppressWarnings( "restriction" )
 public class UploadPanel extends Composite {
 
   private static long KB = 1000;
@@ -48,7 +45,7 @@ public class UploadPanel extends Composite {
     super( parent, SWT.NONE );
     this.fileNames = fileNames;
     initImages();
-    setLayout( createGridLayout( 1, 0, 5 ) );
+    setLayout( LayoutUtil.createGridLayout( 1, 0, 5 ) );
     icons = new ArrayList<>();
     createChildren();
   }
@@ -67,12 +64,12 @@ public class UploadPanel extends Composite {
       if( fileName != null ) {
         Composite container = new Composite( this, SWT.BORDER );
         container.setLayout( createContainerLayout() );
-        container.setLayoutData( createHorizontalFillData() );
+        container.setLayoutData( LayoutUtil.createHorizontalFillData() );
         Label icon = new Label( container, SWT.NONE );
         icon.setImage( emptyIcon );
         icons.add( icon );
         Label name = new Label( container, SWT.NONE );
-        name.setLayoutData( createHorizontalFillData() );
+        name.setLayoutData( LayoutUtil.createHorizontalFillData() );
         name.setText( fileName );
       }
     }

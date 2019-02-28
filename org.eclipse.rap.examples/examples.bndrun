@@ -41,6 +41,7 @@
 	org.apache.felix.http.jetty;version='[4.0.6,4.0.7)',\
 	org.apache.felix.log;version='[1.2.0,1.2.1)',\
 	org.apache.felix.scr;version='[2.1.14,2.1.15)',\
-	org.eclipse.rap.filedialog.demo.examples;version=snapshot
+	org.eclipse.rap.filedialog.demo.examples;version=snapshot,\
+	org.eclipse.rap.filedialog;version=snapshot
 # When you work with rap, do not forget osgi.nl !
 -runproperties: osgi.nl=en_US

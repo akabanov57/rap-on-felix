@@ -8,31 +8,29 @@
  * Contributors:
  *    EclipseSource - initial API and implementation
  ******************************************************************************/
-package org.eclipse.swt.internal.widgets;
+package org.eclipse.rap.filedialog.internal;
 
-import org.eclipse.rap.rwt.RWT;
-import org.eclipse.rap.rwt.client.ClientFile;
-import org.eclipse.rap.rwt.client.service.ClientFileUploader;
+import org.eclipse.rap.rwt.widgets.FileUpload;
 
 
-public class UploaderService implements Uploader {
+public class UploaderWidget implements Uploader {
 
-  private final ClientFile[] clientFiles;
+  private final FileUpload fileUpload;
 
-  public UploaderService( ClientFile[] clientFiles ) {
-    this.clientFiles = clientFiles;
+  public UploaderWidget( FileUpload fileUpload ) {
+    this.fileUpload = fileUpload;
   }
 
   @Override
   public void submit( String url ) {
-    ClientFileUploader service = RWT.getClient().getService( ClientFileUploader.class );
-    if( service != null ) {
-      service.submit( url, clientFiles );
-    }
+    fileUpload.submit( url );
   }
 
   @Override
   public void dispose() {
+    if( !fileUpload.isDisposed() ) {
+      fileUpload.dispose();
+    }
   }
 
 }

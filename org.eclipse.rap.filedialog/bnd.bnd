@@ -2,11 +2,11 @@ Bundle-Version: 3.7.0-SNAPSHOT
 Bundle-Name: org.eclipse.rap.filedialog
 Bundle-SymbolicName: org.eclipse.rap.filedialog
 Automatic-Module-Name: org.eclipse.rap.filedialog
-Private-Package: org.eclipse.swt.internal.widgets
-Export-Package: org.eclipse.swt.widgets
+Export-Package: org.eclipse.rap.filedialog
 -buildpath: \
 	org.eclipse.rap.rwt;version=latest,\
 	org.eclipse.rap.fileupload;version=latest
 -includeresource: src/about.html
 -pom: groupid = org.eclipse.rap,\
 	artifactid = org.eclipse.rap.filedialog
+-privatepackage: org.eclipse.rap.filedialog.internal
