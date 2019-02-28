@@ -1,0 +1,11 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-SymbolicName: org.eclipse.rap.nebula.jface.gridviewer
+Automatic-Module-Name: org.eclipse.rap.nebula.jface.gridviewer
+-includeresource: about.html
+-privatepackage: org.eclipse.nebula.jface.gridviewer.internal
+Export-Package: org.eclipse.nebula.jface.gridviewer
+-buildpath: \
+	org.eclipse.rap.jface;version=latest,\
+	org.eclipse.rap.nebula.widgets.grid;version=latest,\
+	org.eclipse.rap.rwt,\
+	org.eclipse.core.commands;version=latest

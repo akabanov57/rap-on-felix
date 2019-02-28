@@ -1,0 +1,11 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-SymbolicName: org.eclipse.rap.nebula.widgets.grid.demo.examples
+Automatic-Module-Name: org.eclipse.rap.nebula.widgets.grid.demo.examples
+Bundle-Activator: org.eclipse.rap.nebula.widget.grid.demo.examples.Activator
+Export-Package: org.eclipse.rap.nebula.widget.grid.demo.examples
+-buildpath: \
+	org.eclipse.rap.examples;version=latest,\
+	org.eclipse.rap.nebula.widgets.grid;version=latest,\
+	org.eclipse.rap.rwt;version=latest,\
+	osgi.core
+-includeresource: about.html

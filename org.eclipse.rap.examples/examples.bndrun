@@ -16,7 +16,9 @@
 	osgi.identity;filter:='(osgi.identity=org.eclipse.core.jobs)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.common)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.rap.rwt.osgi)',\
-	bnd.identity;id='org.eclipse.rap.filedialog.demo.examples'
+	bnd.identity;id='org.eclipse.rap.filedialog.demo.examples',\
+	bnd.identity;id='org.eclipse.rap.nebula.widgets.grid.demo.examples',\
+	bnd.identity;id='org.eclipse.rap.nebula.widgets.richtext.demo.examples'
 -runblacklist: osgi.identity;filter:='(osgi.identity=org.eclipse.osgi)'
 -runbundles: \
 	org.apache.felix.bundlerepository;version='[2.0.10,2.0.11)',\
@@ -42,6 +44,10 @@
 	org.apache.felix.log;version='[1.2.0,1.2.1)',\
 	org.apache.felix.scr;version='[2.1.14,2.1.15)',\
 	org.eclipse.rap.filedialog.demo.examples;version=snapshot,\
-	org.eclipse.rap.filedialog;version=snapshot
+	org.eclipse.rap.filedialog;version=snapshot,\
+	org.eclipse.rap.nebula.widgets.grid;version=snapshot,\
+	org.eclipse.rap.nebula.widgets.grid.demo.examples;version=snapshot,\
+	org.eclipse.rap.nebula.widgets.richtext;version=snapshot,\
+	org.eclipse.rap.nebula.widgets.richtext.demo.examples;version=snapshot
 # When you work with rap, do not forget osgi.nl !
 -runproperties: osgi.nl=en_US

@@ -1,0 +1,11 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-SymbolicName: org.eclipse.rap.nebula.widgets.richtext.demo.examples
+Automatic-Module-Name: org.eclipse.rap.nebula.widgets.richtext.demo.examples
+Bundle-Activator: org.eclipse.rap.nebula.widgets.richtext.demo.examples.Activator
+-buildpath: \
+	org.eclipse.rap.examples;version=latest,\
+	osgi.core,\
+	org.eclipse.rap.nebula.widgets.richtext;version=latest,\
+	org.eclipse.rap.rwt;version=latest
+Export-Package: org.eclipse.rap.nebula.widgets.richtext.demo.examples
+-includeresource: about.html

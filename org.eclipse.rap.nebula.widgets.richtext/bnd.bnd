@@ -1,0 +1,9 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-SymbolicName: org.eclipse.rap.nebula.widgets.richtext
+Automatic-Module-Name: org.eclipse.rap.nebula.widgets.richtext
+-buildpath: org.eclipse.rap.rwt;version=latest
+-includeresource: about.html,\
+	resources=src/resources
+Export-Package: \
+	org.eclipse.nebula.widgets.richtext.toolbar,\
+	org.eclipse.nebula.widgets.richtext

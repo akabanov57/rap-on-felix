@@ -1,0 +1,13 @@
+Bundle-Version: 3.7.0-SNAPSHOT
+Bundle-SymbolicName: org.eclipse.rap.nebula.widgets.grid
+Automatic-Module-Name: org.eclipse.rap.nebula.widgets.grid
+-buildpath: org.eclipse.rap.rwt;version=latest
+-privatepackage: \
+	org.eclipse.nebula.internal.widgets.grid.gridkit,\
+	org.eclipse.nebula.internal.widgets.grid.gridcolumngroupkit,\
+	org.eclipse.nebula.internal.widgets.grid.gridcolumnkit,\
+	org.eclipse.nebula.internal.widgets.grid.griditemkit
+Export-Package: \
+	org.eclipse.nebula.internal.widgets.grid,\
+	org.eclipse.nebula.widgets.grid
+-includeresource: about.html

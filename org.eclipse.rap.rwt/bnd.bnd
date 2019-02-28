@@ -109,7 +109,8 @@ Export-Package: \
 	org.eclipse.rap.rwt.internal.textsize,\
 	org.eclipse.rap.rwt.internal.lifecycle,\
 	org.eclipse.rap.rwt.internal,\
-	org.eclipse.rap.rwt.internal.application
+	org.eclipse.rap.rwt.internal.application,\
+	org.eclipse.rap.rwt.internal.template
 -buildpath: javax.servlet-api
 -includeresource: \
 	about_files=src/about_files,\
@@ -126,6 +127,5 @@ Export-Package: \
 	artifactid = org.eclipse.rap.rwt
 -privatepackage: \
 	org.eclipse.rap.rwt.internal.engine,\
-	org.eclipse.rap.rwt.internal.template,\
 	org.eclipse.rap.rwt.internal.widgets,\
 	org.eclipse.rap.rwt.internal.widgets.fileuploadkit
