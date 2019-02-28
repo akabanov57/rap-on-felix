@@ -23,25 +23,6 @@ Export-Package: \
 	org.eclipse.rap.rwt.client.service,\
 	org.eclipse.rap.rwt.dnd,\
 	org.eclipse.rap.rwt.engine,\
-	org.eclipse.rap.rwt.internal,\
-	org.eclipse.rap.rwt.internal.application,\
-	org.eclipse.rap.rwt.internal.client,\
-	org.eclipse.rap.rwt.internal.engine,\
-	org.eclipse.rap.rwt.internal.lifecycle,\
-	org.eclipse.rap.rwt.internal.protocol,\
-	org.eclipse.rap.rwt.internal.remote,\
-	org.eclipse.rap.rwt.internal.resources,\
-	org.eclipse.rap.rwt.internal.scripting,\
-	org.eclipse.rap.rwt.internal.serverpush,\
-	org.eclipse.rap.rwt.internal.service,\
-	org.eclipse.rap.rwt.internal.template,\
-	org.eclipse.rap.rwt.internal.textsize,\
-	org.eclipse.rap.rwt.internal.theme,\
-	org.eclipse.rap.rwt.internal.theme.css,\
-	org.eclipse.rap.rwt.internal.util,\
-	org.eclipse.rap.rwt.internal.widgets,\
-	org.eclipse.rap.rwt.internal.widgets.dropdownkit,\
-	org.eclipse.rap.rwt.internal.widgets.fileuploadkit,\
 	org.eclipse.rap.rwt.remote,\
 	org.eclipse.rap.rwt.scripting,\
 	org.eclipse.rap.rwt.service,\
@@ -114,7 +95,21 @@ Export-Package: \
 	org.eclipse.nebula.widgets.grid.internal.gridkit,\
 	org.eclipse.swt.widgets,\
 	org.eclipse.rap.rwt.widgets,\
-	org.w3c.css.sac
+	org.w3c.css.sac,\
+	org.eclipse.rap.rwt.internal.util,\
+	org.eclipse.rap.rwt.internal.resources,\
+	org.eclipse.rap.rwt.internal.client,\
+	org.eclipse.rap.rwt.internal.scripting,\
+	org.eclipse.rap.rwt.internal.theme.css,\
+	org.eclipse.rap.rwt.internal.theme,\
+	org.eclipse.rap.rwt.internal.remote,\
+	org.eclipse.rap.rwt.internal.protocol,\
+	org.eclipse.rap.rwt.internal.service,\
+	org.eclipse.rap.rwt.internal.serverpush,\
+	org.eclipse.rap.rwt.internal.textsize,\
+	org.eclipse.rap.rwt.internal.lifecycle,\
+	org.eclipse.rap.rwt.internal,\
+	org.eclipse.rap.rwt.internal.application
 -buildpath: javax.servlet-api
 -includeresource: \
 	about_files=src/about_files,\
@@ -129,3 +124,8 @@ Export-Package: \
 	src/rwt.js
 -pom: groupid = org.eclipse.rap,\
 	artifactid = org.eclipse.rap.rwt
+-privatepackage: \
+	org.eclipse.rap.rwt.internal.engine,\
+	org.eclipse.rap.rwt.internal.template,\
+	org.eclipse.rap.rwt.internal.widgets,\
+	org.eclipse.rap.rwt.internal.widgets.fileuploadkit
