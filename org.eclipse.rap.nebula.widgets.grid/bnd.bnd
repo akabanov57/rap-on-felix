@@ -11,3 +11,5 @@ Export-Package: \
 	org.eclipse.nebula.internal.widgets.grid,\
 	org.eclipse.nebula.widgets.grid
 -includeresource: about.html
+-pom: groupid = org.eclipse.rap,\
+	artifactid = org.eclipse.rap.nebula.widgets.grid

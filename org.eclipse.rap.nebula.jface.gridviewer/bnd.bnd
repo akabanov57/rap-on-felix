@@ -9,3 +9,5 @@ Export-Package: org.eclipse.nebula.jface.gridviewer
 	org.eclipse.rap.nebula.widgets.grid;version=latest,\
 	org.eclipse.rap.rwt,\
 	org.eclipse.core.commands;version=latest
+-pom: groupid = org.eclipse.rap,\
+	artifactid = org.eclipse.rap.nebula.jface.gridviewer

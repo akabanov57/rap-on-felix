@@ -7,3 +7,5 @@ Automatic-Module-Name: org.eclipse.rap.nebula.widgets.richtext
 Export-Package: \
 	org.eclipse.nebula.widgets.richtext.toolbar,\
 	org.eclipse.nebula.widgets.richtext
+-pom: groupid = org.eclipse.rap,\
+	artifactid = org.eclipse.rap.nebula.widgets.richtext
