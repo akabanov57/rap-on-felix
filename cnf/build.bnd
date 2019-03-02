@@ -1,7 +1,7 @@
 javac.source:           11
 javac.target:           11
 javac.compliance:       11
-javac.debug:            off
+javac.debug:            on
 
 -plugin.1.Local: \
 	aQute.bnd.deployer.repository.LocalIndexedRepo; \
@@ -25,6 +25,7 @@ javac.debug:            off
       releaseUrl = https://repo.maven.apache.org/maven2/; \
       name       = Central
 
+-contract: *
 -releaserepo: Release
 -baselinerepo: Release
 -sources: true

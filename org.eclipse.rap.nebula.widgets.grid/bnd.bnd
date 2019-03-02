@@ -7,6 +7,11 @@ Automatic-Module-Name: org.eclipse.rap.nebula.widgets.grid
 	org.eclipse.nebula.internal.widgets.grid.gridcolumngroupkit,\
 	org.eclipse.nebula.internal.widgets.grid.gridcolumnkit,\
 	org.eclipse.nebula.internal.widgets.grid.griditemkit
+Provide-Capability: \
+	osgi.contract; \
+	osgi.contract=RapNebulaGrid; \
+	uses:="${exports}"; \
+	version:Version="3.7.0"
 Export-Package: \
 	org.eclipse.nebula.internal.widgets.grid,\
 	org.eclipse.nebula.widgets.grid

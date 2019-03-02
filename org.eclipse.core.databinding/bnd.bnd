@@ -10,6 +10,11 @@ Automatic-Module-Name: org.eclipse.core.databinding
 	com.ibm.icu,\
 	org.eclipse.core.databinding.property;version=latest
 Bundle-Activator: org.eclipse.core.internal.databinding.Activator
+Provide-Capability: \
+	osgi.contract; \
+	osgi.contract=EclipseCoreDatabinding; \
+	uses:="${exports}"; \
+	version:Version="1.7.100"
 Export-Package: \
 	org.eclipse.core.databinding,\
 	org.eclipse.core.databinding.conversion,\

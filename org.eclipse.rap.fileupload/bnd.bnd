@@ -6,6 +6,11 @@ Automatic-Module-Name: org.eclipse.rap.fileupload
 	org.apache.felix.http.servlet-api,\
 	org.apache.commons.commons-fileupload
 Private-Package: org.eclipse.rap.fileupload.internal
+Provide-Capability: \
+	osgi.contract; \
+	osgi.contract=RapFileupload; \
+	uses:="${exports}"; \
+	version:Version="3.7.0"
 Export-Package: org.eclipse.rap.fileupload
 -includeresource: src/about.html
 -pom: groupid = org.eclipse.rap,\

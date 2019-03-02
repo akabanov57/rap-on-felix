@@ -1,6 +1,11 @@
 Automatic-Module-Name: org.eclipse.core.commands
 Bundle-SymbolicName: org.eclipse.core.commands
 Bundle-Version: 3.9.200-SNAPSHOT
+Provide-Capability: \
+	osgi.contract; \
+	osgi.contract=EclipseCoreCommands; \
+	uses:="${exports}"; \
+	version:Version="3.9.200"
 Export-Package: \
 	org.eclipse.core.commands,\
 	org.eclipse.core.commands.common,\

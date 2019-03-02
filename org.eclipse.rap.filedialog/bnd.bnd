@@ -2,6 +2,11 @@ Bundle-Version: 3.7.0-SNAPSHOT
 Bundle-Name: org.eclipse.rap.filedialog
 Bundle-SymbolicName: org.eclipse.rap.filedialog
 Automatic-Module-Name: org.eclipse.rap.filedialog
+Provide-Capability: \
+	osgi.contract; \
+	osgi.contract=RapFiledialog; \
+	uses:="${exports}"; \
+	version:Version="3.7.0"
 Export-Package: org.eclipse.rap.filedialog
 -buildpath: \
 	org.eclipse.rap.rwt;version=latest,\

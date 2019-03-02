@@ -4,6 +4,11 @@ Automatic-Module-Name: org.eclipse.rap.nebula.widgets.richtext
 -buildpath: org.eclipse.rap.rwt;version=latest
 -includeresource: about.html,\
 	resources=src/resources
+Provide-Capability: \
+	osgi.contract; \
+	osgi.contract=RapNebulaRichtext; \
+	uses:="${exports}"; \
+	version:Version="3.7.0"
 Export-Package: \
 	org.eclipse.nebula.widgets.richtext.toolbar,\
 	org.eclipse.nebula.widgets.richtext

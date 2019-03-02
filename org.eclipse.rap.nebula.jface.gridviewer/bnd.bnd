@@ -3,6 +3,11 @@ Bundle-SymbolicName: org.eclipse.rap.nebula.jface.gridviewer
 Automatic-Module-Name: org.eclipse.rap.nebula.jface.gridviewer
 -includeresource: about.html
 -privatepackage: org.eclipse.nebula.jface.gridviewer.internal
+Provide-Capability: \
+	osgi.contract; \
+	osgi.contract=RapNebulaJFaceGridViewer; \
+	uses:="${exports}"; \
+	version:Version="3.7.0"
 Export-Package: org.eclipse.nebula.jface.gridviewer
 -buildpath: \
 	org.eclipse.rap.jface;version=latest,\

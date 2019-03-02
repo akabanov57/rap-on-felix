@@ -3,6 +3,11 @@ Bundle-Activator: org.eclipse.jface.internal.JFaceActivator
 Bundle-Name: org.eclipse.rap.jface
 Bundle-SymbolicName: org.eclipse.rap.jface
 Automatic-Module-Name: org.eclipse.rap.jface
+Provide-Capability: \
+	osgi.contract; \
+	osgi.contract=RapJFace; \
+	uses:="${exports}"; \
+	version:Version="3.7.0"
 Export-Package: \
 	org.eclipse.jface.contexts,\
 	org.eclipse.jface.dialogs,\
