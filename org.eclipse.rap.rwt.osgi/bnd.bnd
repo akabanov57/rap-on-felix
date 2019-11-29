@@ -7,9 +7,9 @@ Export-Package: org.eclipse.rap.rwt.osgi
 Bundle-Activator: org.eclipse.rap.rwt.osgi.internal.Activator
 -buildpath: \
 	org.eclipse.rap.rwt;version=latest,\
-	osgi.enterprise,\
 	osgi.core,\
-	javax.servlet-api
+	javax.servlet-api,\
+	osgi.cmpn
 -includeresource: src/about.html
 -pom: groupid = org.eclipse.rap,\
 	artifactid = org.eclipse.rap.rwt.osgi
